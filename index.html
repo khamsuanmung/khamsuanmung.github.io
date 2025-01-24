@@ -1,129 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kham Suan Mung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2ecc71',
+                        secondary: '#3498db',
+                        textColor: '#2c3e50',
+                        accentColor: '#e74c3c'
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">KSM</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+<body class="font-[Poppins] text-textColor">
+    <header class="fixed w-full bg-white z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">KSM</div>
+            <ul class="flex space-x-8">
+                <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                <li><a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">Welcome to My World</h1>
-            <p class="subtitle">Creative Developer & Designer</p>
-            <div class="cta-buttons">
-                <a href="#portfolio" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get In Touch</a>
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gray-50 pt-20">
+        <div class="text-center">
+            <h1
+                class="text-5xl font-bold mb-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+                Welcome to My World</h1>
+            <p class="text-xl text-gray-600 mb-8">Creative Developer & Designer</p>
+            <div class="space-x-4">
+                <a href="#portfolio"
+                    class="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">View My
+                    Work</a>
+                <a href="#contact"
+                    class="bg-secondary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">Get In
+                    Touch</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-            <p>Scroll Down</p>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-gray-400 rounded-full relative">
+                <div class="w-1 h-2 bg-gray-400 absolute left-1/2 top-2 transform -translate-x-1/2 rounded-full"></div>
+            </div>
+            <p class="text-sm text-gray-400 mt-2">Scroll Down</p>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm a passionate developer and designer who loves creating beautiful and functional web experiences. With a keen eye for detail and a love for clean code, I bring ideas to life through modern web technologies.</p>
-                    <div class="skills">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center">
+                    <p class="text-lg text-gray-600 mb-8">Hello! I'm a passionate developer and designer who loves
+                        creating beautiful and functional web experiences. With a keen eye for detail and a love for
+                        clean code, I bring ideas to life through modern web technologies.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="flex flex-col items-center p-4 rounded-lg hover:shadow-lg transition-all">
+                            <i class="fab fa-html5 text-4xl text-primary mb-2"></i>
+                            <span class="font-medium">HTML5</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
+                        <div class="flex flex-col items-center p-4 rounded-lg hover:shadow-lg transition-all">
+                            <i class="fab fa-css3-alt text-4xl text-primary mb-2"></i>
+                            <span class="font-medium">CSS3</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
+                        <div class="flex flex-col items-center p-4 rounded-lg hover:shadow-lg transition-all">
+                            <i class="fab fa-js text-4xl text-primary mb-2"></i>
+                            <span class="font-medium">JavaScript</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
+                        <div class="flex flex-col items-center p-4 rounded-lg hover:shadow-lg transition-all">
+                            <i class="fab fa-react text-4xl text-primary mb-2"></i>
+                            <span class="font-medium">React</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>My Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Project One</h3>
-                        <p>Web Development</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Project Two</h3>
-                        <p>UI/UX Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Project Three</h3>
-                        <p>Mobile App</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>email@example.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+1 234 567 890</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>New York, NY</p>
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">My Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project One</h3>
+                        <p class="text-gray-600">Web Development</p>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Two</h3>
+                        <p class="text-gray-600">UI/UX Design</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Three</h3>
+                        <p class="text-gray-600">Mobile App</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 All Rights Reserved</p>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="flex flex-col items-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <i class="fas fa-envelope text-3xl text-primary mb-4"></i>
+                        <p class="text-gray-600">email@example.com</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <i class="fas fa-phone text-3xl text-primary mb-4"></i>
+                        <p class="text-gray-600">+1 234 567 890</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <i class="fas fa-map-marker-alt text-3xl text-primary mb-4"></i>
+                        <p class="text-gray-600">New York, NY</p>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-2xl text-gray-600 hover:text-primary transition-colors"><i
+                            class="fab fa-github"></i></a>
+                    <a href="#" class="text-2xl text-gray-600 hover:text-primary transition-colors"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-2xl text-gray-600 hover:text-primary transition-colors"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600">&copy; 2024 All Rights Reserved</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
